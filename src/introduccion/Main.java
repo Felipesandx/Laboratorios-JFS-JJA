@@ -29,14 +29,13 @@ public class Main {
 
             int opcion = Integer.parseInt(scanner.nextLine());
 //metodo para agregar estudiante
-            if (opcion == 1) {
+            if (opcion == 1) { 
 
                 System.out.print("Ingrese el nombre del estudiante: ");
                 String nombre = scanner.nextLine();
-                
-//metodo para validar calificacion 
-                System.out.print("Ingrese la calificación del estudiante: "); 
-                double calificacion = Double.parseDouble(scanner.nextLine());
+
+                System.out.print("Ingrese la calificación del estudiante: ");
+                double calificacion = leerNumero(scanner, "\nIngrese la calificación del estudiante: ");
 
                 estudiantes.add(nombre);
                 calificaciones.add(calificacion);
@@ -102,5 +101,22 @@ public class Main {
         }
 
         scanner.close();
+    }
+    
+    public static double leerNumero(Scanner scanner, String mensaje) {
+        double numero = 0;
+        boolean valido = false;
+
+        while (!valido) {
+            System.out.print(mensaje);
+            String entrada = scanner.nextLine();
+            try {
+                numero = Double.parseDouble(entrada);
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Valor invalido. Ingresa un numero.");
+            }
+        }
+        return numero;
     }
 }
