@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Cambios {
 
     static List<String> estudiantes = new ArrayList<>();
     static List<Double> calificaciones = new ArrayList<>();
@@ -12,20 +12,20 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        int opcion; 
 //metodo para el menú
         
   //convertir el menú en un switch  
         System.out.println("Bienvenido al sistema de gestión de estudiantes.");
-
-        while (true) {
+    
+        do {
             System.out.println("\n1. Agregar estudiante");
             System.out.println("2. Mostrar lista de estudiantes");
             System.out.println("3. Calcular promedio de calificaciones");
             System.out.println("4. Mostrar estudiante con la calificación más alta");
             System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
-
-            int opcion = Integer.parseInt(scanner.nextLine());
+            opcion = scanner.nextInt();
 //metodo para agregar estudiante
             if (opcion == 1) {
 
@@ -97,7 +97,7 @@ public class Main {
 
                 System.out.println("Opción no válida. Intente de nuevo.");
             }
-        }
+        } while (opcion != 5);
 
         scanner.close();
     }
