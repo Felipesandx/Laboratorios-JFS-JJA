@@ -19,12 +19,7 @@ public class Main {
         System.out.println("Bienvenido al sistema de gestión de estudiantes.");
 
         do {
-            System.out.println("\n1. Agregar estudiante");
-            System.out.println("2. Mostrar lista de estudiantes");
-            System.out.println("3. Calcular promedio de calificaciones");
-            System.out.println("4. Mostrar estudiante con la calificación más alta");
-            System.out.println("5. Salir");
-            System.out.print("Seleccione una opción: ");
+        	mostrarMenú();
             opcion = scanner.nextInt();
 //metodo para agregar estudiante
             if (opcion == 1) { 
@@ -116,5 +111,13 @@ public class Main {
             }
         }
         return numero;
+    }
+    public static void mostrarMenú() {
+        System.out.println("\n1. Agregar estudiante");
+        System.out.println("2. Mostrar lista de estudiantes");
+        System.out.println("3. Calcular promedio de calificaciones");
+        System.out.println("4. Mostrar estudiante con la calificación más alta");
+        System.out.println("5. Salir");
+        System.out.print("Seleccione una opción: ");
     }
 }
