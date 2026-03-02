@@ -20,22 +20,22 @@ public class Main {
 
         do {
         	mostrarMenú();
-            opcion = scanner.nextInt();
+            opcion = Integer.parseInt(scanner.nextLine());
+            switch (opcion) {
 //metodo para agregar estudiante
-            if (opcion == 1) { 
-
+            case 1: 
                 System.out.print("Ingrese el nombre del estudiante: ");
                 String nombre = scanner.nextLine();
 
-                System.out.print("Ingrese la calificación del estudiante: ");
-                double calificacion = leerNumero(scanner, "\nIngrese la calificación del estudiante: ");
+                double calificacion = leerNumero(scanner, "Ingrese la calificación del estudiante: ");
 
                 estudiantes.add(nombre);
                 calificaciones.add(calificacion);
 
                 System.out.println("Estudiante agregado correctamente.");
+                break;
 //metodo mostrar lista
-            } else if (opcion == 2) {
+            case 2:
 
                 if (estudiantes.isEmpty()) {
                     System.out.println("No hay estudiantes registrados.");
@@ -46,24 +46,25 @@ public class Main {
                                 " - Calificación: " + calificaciones.get(i));
                     }
                 }
+                break;
 
-            } else if (opcion == 3) {
-
+            case 3:
                 if (calificaciones.isEmpty()) {
                     System.out.println("No hay calificaciones registradas.");
                 } else {
                     double suma = 0;
 
-                    for (double calificacion : calificaciones) {
-                        suma += calificacion;
+                    for (double cal : calificaciones) { //cambio la variable por que al agregar el switch cambia el alcance
+                        suma += cal;
                     }
+                    
 
                     double promedio = suma / calificaciones.size();
                     System.out.println("El promedio de calificaciones es: " + promedio);
                 }
+                break;
 
-            } else if (opcion == 4) {
-
+            case 4:
                 if (calificaciones.isEmpty()) {
                     System.out.println("No hay calificaciones registradas.");
                 } else {
@@ -81,15 +82,17 @@ public class Main {
                     System.out.println("El estudiante con la calificación más alta es: "
                             + estudianteMax + " con " + maxCalificacion);
                 }
+                break;
 
-            } else if (opcion == 5) {
+            case 5:
 
                 System.out.println("Saliendo del sistema...");
                 break;
 
-            } else {//podria usarse como el default
+            default:
 
                 System.out.println("Opción no válida. Intente de nuevo.");
+                break;
             }
         }while (opcion != 5);
 
