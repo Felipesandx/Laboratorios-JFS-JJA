@@ -125,6 +125,8 @@ Reflexionar sobre:
 - Mantenimiento
 - Claridad
 
+**R/ El uso de metodos tiene muchas ventajas, entre eso está la limpieza y la organización del codigo ya que permite segmentar el programa por tareas y así tener un orden más fácil de entender, y también ayuda mucho a ahorrar líneas de código ya que nos permite reutilizar las funcionalidades de cada metodo sin tener que escribirlo otra vez; y el mantenimiento es más sencillo porque el código se interpreta mejor y ayuda a implementar cambios, y la claridad es una ventaja muy grande ya que permite que no solo quien hizo el codigo pueda comprenderlo sino que se facilite para otros colaboradores.
+
 ---
 
 ## 2️⃣ ¿Por qué no es recomendable usar muchas variables globales?
