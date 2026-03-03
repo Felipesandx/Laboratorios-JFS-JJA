@@ -25,24 +25,13 @@ public class Main {
             case 1: 
             	agregarEstudiante();
                 break;
+                
             case 2:
             	mostrarLista();
             	break;
-
+            	
             case 3:
-                if (calificaciones.isEmpty()) {
-                    System.out.println("No hay calificaciones registradas.");
-                } else {
-                    double suma = 0;
-
-                    for (double cal : calificaciones) { //cambio la variable por que al agregar el switch cambia el alcance
-                        suma += cal;
-                    }
-                    
-
-                    double promedio = suma / calificaciones.size();
-                    System.out.println("El promedio de calificaciones es: " + promedio);
-                }
+            	calcularPromedioEstudiante();
                 break;
 
             case 4:
@@ -126,5 +115,19 @@ public class Main {
                          " - Calificación: " + calificaciones.get(i));
              }
          }
+    }
+    public static void calcularPromedioEstudiante() {
+    	if (calificaciones.isEmpty()) {
+            System.out.println("No hay calificaciones registradas.");
+        } else {
+            double suma = 0;
+
+            for (double cal : calificaciones) { //cambio la variable por que al agregar el switch cambia el alcance
+                suma += cal;
+            }
+            
+            double promedio = suma / calificaciones.size();
+            System.out.println("El promedio de calificaciones es: " + promedio);
+        }
     }
 }
