@@ -31,13 +31,19 @@ Al analizar el programa, lo primero que notamos fue que el cuerpo principal esta
 nigún metodo, la validación de entrada de datos estaba casi sin tocar, si poniamos una letra el escoger una opción del menú, crasheaba.
 
 
+
 ## 1️⃣ Identificación de Tareas Repetitivas
 
 Responder:
 
 - ¿Qué partes del código pueden convertirse en métodos?
+  **R/ Mostrar menú, Cada una de las opciones del menú, tambien la validación de datos (validacion para números enteros y decimales) y el rango de las calificaciones.
+  
 - ¿Qué bloques de código se repiten?
+  **R/ La salidad de datos de "No hay calificaciones registradas."
+  
 - ¿Qué responsabilidades pueden separarse?
+  **R/ Cada opción del menú. El ingreso de nota se dividio en dos métodos, uno que valida la entrada de datos como decimal y otro método que se valida el rango de notas de 0 a 100. 
 
 Ejemplos de posibles tareas:
 
@@ -48,7 +54,7 @@ Ejemplos de posibles tareas:
 
 Explicar por qué dividir estas tareas mejora el programa.
 
----
+**R/ Porque hace el codigo más legible y reutilizable. Dividirlas hace que sea más fácil el llevar el control de cada tarea por separado si que se afecten entre sí.
 
 ## 2️⃣ Variables Locales vs Globales
 
