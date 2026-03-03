@@ -9,30 +9,21 @@ public class Main {
     static List<String> estudiantes = new ArrayList<>();
     static List<Double> calificaciones = new ArrayList<>();
 
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        int opcion;
-//metodo para el menú
         
-  //convertir el menú en un switch  
+        int opcion;
+         
         System.out.println("Bienvenido al sistema de gestión de estudiantes.");
-
+        
         do {
         	mostrarMenú();
             opcion = Integer.parseInt(scanner.nextLine());
             switch (opcion) {
-//metodo para agregar estudiante
+
             case 1: 
-                System.out.print("Ingrese el nombre del estudiante: ");
-                String nombre = scanner.nextLine();
-
-                double calificacion = leerNumero(scanner, "Ingrese la calificación del estudiante: ");
-
-                estudiantes.add(nombre);
-                calificaciones.add(calificacion);
-
-                System.out.println("Estudiante agregado correctamente.");
+            	agregarEstudiante();
                 break;
 //metodo mostrar lista
             case 2:
@@ -122,5 +113,17 @@ public class Main {
         System.out.println("4. Mostrar estudiante con la calificación más alta");
         System.out.println("5. Salir");
         System.out.print("Seleccione una opción: ");
+    }
+    
+    public static void agregarEstudiante() {
+    System.out.print("Ingrese el nombre del estudiante: ");
+    String nombre = scanner.nextLine();
+
+    double calificacion = leerNumero(scanner, "Ingrese la calificación del estudiante: ");
+
+    estudiantes.add(nombre);
+    calificaciones.add(calificacion);
+
+    System.out.println("Estudiante agregado correctamente.");
     }
 }
