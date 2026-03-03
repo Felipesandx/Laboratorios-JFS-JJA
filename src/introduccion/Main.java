@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
+	// Valores globales
     static List<String> estudiantes = new ArrayList<>();
     static List<Double> calificaciones = new ArrayList<>();
 
@@ -17,9 +18,13 @@ public class Main {
          
         System.out.println("Bienvenido al sistema de gestión de estudiantes.");
         
+        // cambiamos el main usando un do-while, para simplificar la opcion de salida del programa 
         do {
-        	mostrarMenú();
-            opcion = leerEntero(scanner,"");
+        	mostrarMenú(); // metodo que contiene el menu
+        	
+            opcion = leerEntero(scanner,""); // se creo un metodo para que la entra
+            
+            // Utilizamos un switch ya que es mas ordenado y fácil de entender 
             switch (opcion) {
 
             case 1: 
@@ -51,6 +56,7 @@ public class Main {
         scanner.close();
     }
     
+    //metodo que valida datos tipo double
     public static double leerNumero(Scanner scanner, String mensaje) {
         double numero = 0;
         boolean valido = false;
@@ -67,6 +73,8 @@ public class Main {
         }
         return numero;
     }
+    
+    // Metodo que muestra el menú
     public static void mostrarMenú() {
         System.out.println("\n1. Agregar estudiante");
         System.out.println("2. Mostrar lista de estudiantes");
@@ -76,17 +84,20 @@ public class Main {
         System.out.print("Seleccione una opción: ");
     }
     
+    //Metodo de la primera opcion del menu, permite ingresar estudiantes y notas
     public static void agregarEstudiante() {
     	System.out.print("Ingrese el nombre del estudiante: ");
     	String nombre = scanner.nextLine();
 
-    	double calificacion = leerNumero(scanner, "Ingrese la calificación del estudiante: ");
+    	double calificacion = rangoCalificaciones(scanner, "Ingrese la calificación del estudiante: ");
 
     	estudiantes.add(nombre);
     	calificaciones.add(calificacion);
 
     	System.out.println("Estudiante agregado correctamente.");
     }
+    
+    // Metodo de la segunda opcion del menu, muestra la lista de estudiantes
     public static void mostrarLista() {
     	 if (estudiantes.isEmpty()) {
              System.out.println("No hay estudiantes registrados.");
@@ -98,12 +109,14 @@ public class Main {
              }
          }
     }
+    
+    // Metodo de la tercera opcion del menu, muestra los promedios de los estudiantes
     public static void calcularPromedioEstudiante() {
     	if (calificaciones.isEmpty()) {
             System.out.println("No hay calificaciones registradas.");
         } else {
             double suma = 0;
-
+            
             for (double cal : calificaciones) { //cambio la variable por que al agregar el switch cambia el alcance
                 suma += cal;
             }
@@ -112,6 +125,8 @@ public class Main {
             System.out.println("El promedio de calificaciones es: " + promedio);
         }
     }
+    
+    //Metodo de la cuarta opcion del menu, muestra  la calificacion más alta y el estudiante
     public static void mostrarCalificacionAlta() {
     	 if (calificaciones.isEmpty()) {
              System.out.println("No hay calificaciones registradas.");
@@ -132,6 +147,8 @@ public class Main {
          }
     	 
     }
+    
+    // Metodo que valida que los numeros sean enteros, se usa para validar las entradas en el menu 
     public static int leerEntero(Scanner scanner, String mensaje) {
         int numero = 0;
         boolean valido = false;
@@ -141,11 +158,25 @@ public class Main {
             String entrada = scanner.nextLine();
             try {
                 numero = Integer.parseInt(entrada);
-                valido = true;
+                valido = true; 
             } catch (NumberFormatException e) {
                 System.out.println("Valor invalido. Ingresa un número.");
             }
         }
+        return numero;
+    }
+    
+    // Metodo que valida que la calificacion sea de 0 a 100, y se utiliza cuando se van a agregar calificaciones
+    public static double rangoCalificaciones(Scanner scanner, String mensaje) {
+        double numero; 
+
+        do {
+            numero = leerNumero(scanner, mensaje);
+            if (numero < 0 || numero > 100) {
+                System.out.println("La nota debe ser de 0.00 a 100.00 ");
+            }
+        } while (numero < 0 || numero > 100);
+
         return numero;
     }
     
