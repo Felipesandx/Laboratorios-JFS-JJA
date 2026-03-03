@@ -109,7 +109,8 @@ Explicar en esta sección:
 - Qué validaciones implementaron.
 - Por qué son importantes.
 
----
+**R/Se implementó un método que valida la entrada utilizando un bloque try-catch para capturar posibles errores de conversión (NumberFormatException). Esto evita que el programa falle si el usuario ingresa texto en lugar de números. Además, el uso de un ciclo while garantiza que el programa continúe solicitando el dato hasta que sea válido.
+Estas validaciones son importantes porque hacen que el programa sea más robusto, evitan cierres inesperados y mejoran la experiencia del usuario.**
 
 # 🧩 Parte 4 – Preguntas de Reflexión
 
