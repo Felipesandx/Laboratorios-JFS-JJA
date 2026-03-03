@@ -139,7 +139,7 @@ Reflexionar sobre:
 **R//Siempre pueden existir errores intesperados, por eso es importante darle mantenimiento a nuestros métodos, muchas veces el declarar una variable global nos pueden facilitar errores por que en sistemas más grandes hay alta posibiliad de cruzar los valores.Algunos métodos dependen del correcto funcionamiento de otros, lo que puede generar problemas si no se controla el flujo del programa. Es importante que cada método cumpla una responsabilidad especifica. Depurar al puede ser complicado con los métodos en especial si estan conectados y hay muchas variables globales que tengan conflicto.**
 
 ## 3️⃣ ¿Cómo mejora la modularización la legibilidad del código?
-
+**R/ Mejora la legibilidad ya que permite dividir el programa en partes, lo cual hace mucho más sencillo entender el código, depurar errores, e incluso agregar nuevas funciones y expandir el sistema, además de que el código va a ser más limpio y es mucho más fácil mantenerlo ordenado.
 ---
 
 # 📦 Entregables
