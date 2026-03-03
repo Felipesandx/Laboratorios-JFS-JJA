@@ -35,32 +35,14 @@ public class Main {
                 break;
 
             case 4:
-                if (calificaciones.isEmpty()) {
-                    System.out.println("No hay calificaciones registradas.");
-                } else {
-
-                    double maxCalificacion = calificaciones.get(0);
-                    String estudianteMax = estudiantes.get(0);
-
-                    for (int i = 1; i < calificaciones.size(); i++) {
-                        if (calificaciones.get(i) > maxCalificacion) {
-                            maxCalificacion = calificaciones.get(i);
-                            estudianteMax = estudiantes.get(i);
-                        }
-                    }
-
-                    System.out.println("El estudiante con la calificación más alta es: "
-                            + estudianteMax + " con " + maxCalificacion);
-                }
+               mostrarCalificacionAlta();
                 break;
 
             case 5:
-
                 System.out.println("Saliendo del sistema...");
                 break;
 
             default:
-
                 System.out.println("Opción no válida. Intente de nuevo.");
                 break;
             }
@@ -129,5 +111,24 @@ public class Main {
             double promedio = suma / calificaciones.size();
             System.out.println("El promedio de calificaciones es: " + promedio);
         }
+    }
+    public static void mostrarCalificacionAlta() {
+    	 if (calificaciones.isEmpty()) {
+             System.out.println("No hay calificaciones registradas.");
+         } else {
+
+             double maxCalificacion = calificaciones.get(0);
+             String estudianteMax = estudiantes.get(0);
+
+             for (int i = 1; i < calificaciones.size(); i++) {
+                 if (calificaciones.get(i) > maxCalificacion) {
+                     maxCalificacion = calificaciones.get(i);
+                     estudianteMax = estudiantes.get(i);
+                 }
+             }
+
+             System.out.println("El estudiante con la calificación más alta es: "
+                     + estudianteMax + " con " + maxCalificacion);
+         }
     }
 }
