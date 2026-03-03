@@ -125,9 +125,8 @@ Reflexionar sobre:
 - Mantenimiento
 - Claridad
 
-**R/ El uso de metodos tiene muchas ventajas, entre eso está la limpieza y la organización del codigo ya que permite segmentar el programa por tareas y así tener un orden más fácil de entender, y también ayuda mucho a ahorrar líneas de código ya que nos permite reutilizar las funcionalidades de cada metodo sin tener que escribirlo otra vez; y el mantenimiento es más sencillo porque el código se interpreta mejor y ayuda a implementar cambios, y la claridad es una ventaja muy grande ya que permite que no solo quien hizo el codigo pueda comprenderlo sino que se facilite para otros colaboradores.
+**R/ El uso de metodos tiene muchas ventajas, entre eso está la limpieza y la organización del codigo ya que permite segmentar el programa por tareas y así tener un orden más fácil de entender, y también ayuda mucho a ahorrar líneas de código ya que nos permite reutilizar las funcionalidades de cada metodo sin tener que escribirlo otra vez; y el mantenimiento es más sencillo porque el código se interpreta mejor y ayuda a implementar cambios, y la claridad es una ventaja muy grande ya que permite que no solo quien hizo el codigo pueda comprenderlo sino que se facilite para otros colaboradores.**
 
----
 
 ## 2️⃣ ¿Por qué no es recomendable usar muchas variables globales?
 
@@ -137,7 +136,7 @@ Reflexionar sobre:
 - Dificultad para depurar
 - Dependencia entre métodos
 
----
+**R//Siempre pueden existir errores intesperados, por eso es importante darle mantenimiento a nuestros métodos, muchas veces el declarar una variable global nos pueden facilitar errores por que en sistemas más grandes hay alta posibiliad de cruzar los valores.Algunos métodos dependen del correcto funcionamiento de otros, lo que puede generar problemas si no se controla el flujo del programa. Es importante que cada método cumpla una responsabilidad especifica. Depurar al puede ser complicado con los métodos en especial si estan conectados y hay muchas variables globales que tengan conflicto.**
 
 ## 3️⃣ ¿Cómo mejora la modularización la legibilidad del código?
 
