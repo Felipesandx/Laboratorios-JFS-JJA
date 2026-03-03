@@ -61,8 +61,11 @@ Explicar por qué dividir estas tareas mejora el programa.
 Responder:
 
 - ¿Qué variables deberían declararse como globales (atributos `static` de la clase)?
+- **R/ Usamos como variables o atributos static los arrays de estudiantes y calificaciones, y además del Scanner**
 - ¿Cuáles deberían ser locales dentro de un método?
+- **R/ Utilizamos varias variables locales, como en el caso de la variable numero, estudianteMax, maxCalificacion, opcion, calificacion y cal.**
 - ¿Por qué?
+- **R/ Así permite agilizar calculos y operaciones dentro de cada metodo, especialmente si el dato no es necesario en otra parte de la clase, como en el caso de la variable numero, que se usa para hacer las validaciones tanto en la validacion de double e int**
 
 Reflexionar sobre:
 
