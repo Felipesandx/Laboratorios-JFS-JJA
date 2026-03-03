@@ -25,19 +25,9 @@ public class Main {
             case 1: 
             	agregarEstudiante();
                 break;
-//metodo mostrar lista
             case 2:
-
-                if (estudiantes.isEmpty()) {
-                    System.out.println("No hay estudiantes registrados.");
-                } else {
-                    System.out.println("\nLista de estudiantes:");
-                    for (int i = 0; i < estudiantes.size(); i++) {
-                        System.out.println(estudiantes.get(i) +
-                                " - Calificación: " + calificaciones.get(i));
-                    }
-                }
-                break;
+            	mostrarLista();
+            	break;
 
             case 3:
                 if (calificaciones.isEmpty()) {
@@ -116,14 +106,25 @@ public class Main {
     }
     
     public static void agregarEstudiante() {
-    System.out.print("Ingrese el nombre del estudiante: ");
-    String nombre = scanner.nextLine();
+    	System.out.print("Ingrese el nombre del estudiante: ");
+    	String nombre = scanner.nextLine();
 
-    double calificacion = leerNumero(scanner, "Ingrese la calificación del estudiante: ");
+    	double calificacion = leerNumero(scanner, "Ingrese la calificación del estudiante: ");
 
-    estudiantes.add(nombre);
-    calificaciones.add(calificacion);
+    	estudiantes.add(nombre);
+    	calificaciones.add(calificacion);
 
-    System.out.println("Estudiante agregado correctamente.");
+    	System.out.println("Estudiante agregado correctamente.");
+    }
+    public static void mostrarLista() {
+    	 if (estudiantes.isEmpty()) {
+             System.out.println("No hay estudiantes registrados.");
+         } else {
+             System.out.println("\nLista de estudiantes:");
+             for (int i = 0; i < estudiantes.size(); i++) {
+                 System.out.println(estudiantes.get(i) +
+                         " - Calificación: " + calificaciones.get(i));
+             }
+         }
     }
 }
