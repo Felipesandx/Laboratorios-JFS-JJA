@@ -110,7 +110,7 @@ Explicar en esta sección:
 - Por qué son importantes.
 
 **R/Se implementó un método que valida la entrada utilizando un bloque try-catch para capturar posibles errores de conversión (NumberFormatException). Esto evita que el programa falle si el usuario ingresa texto en lugar de números. Además, el uso de un ciclo while garantiza que el programa continúe solicitando el dato hasta que sea válido.
-Estas validaciones son importantes porque hacen que el programa sea más robusto, evitan cierres inesperados y mejoran la experiencia del usuario.**
+Estas validaciones son importantes porque hacen que el programa sea más robusto, evitan cierres inesperados y mejoran la experiencia del usuario. Las validaciones que agregamos al programa fueron para la entrada de numeros más especificamente datos double e int, usamos double para la entrada de calificaciones ya que pueden llevar decimales e int para las opciones del menú, además de estas agregamos una validación que se asegura de que un valor double sea entre 0 a 100, para usarlo en el ingreso de calificaciones, y evitar que se ingresen calificaciones que no sean validas.**
 
 # 🧩 Parte 4 – Preguntas de Reflexión
 
