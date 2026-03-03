@@ -27,8 +27,8 @@ Aplicar los conceptos de:
 
 # 🧠 Parte 1 – Análisis del Programa Original
 
-Al analizar el programa, lo primero que notamos fue que el cuerpo principal estaba en enteramente hecho con if y else. No tenia
-nigún metodo, la validación de entrada de datos estaba casi sin tocar, si poniamos una letra el escoger una opción del menú, crasheaba.
+**Al analizar el programa, lo primero que notamos fue que el cuerpo principal estaba en enteramente hecho con if y else. No tenia
+nigún metodo, la validación de entrada de datos estaba casi sin tocar, si poniamos una letra el escoger una opción del menú, crasheaba.**
 
 
 
@@ -37,13 +37,13 @@ nigún metodo, la validación de entrada de datos estaba casi sin tocar, si poni
 Responder:
 
 - ¿Qué partes del código pueden convertirse en métodos?
-  **R/ Mostrar menú, Cada una de las opciones del menú, tambien la validación de datos (validacion para números enteros y decimales) y el rango de las calificaciones.
+  **R/ Mostrar menú, Cada una de las opciones del menú, tambien la validación de datos (validacion para números enteros y decimales) y el rango de las calificaciones.**
   
 - ¿Qué bloques de código se repiten?
-  **R/ La salidad de datos de "No hay calificaciones registradas."
+  **R/ La salidad de datos de "No hay calificaciones registradas."**
   
 - ¿Qué responsabilidades pueden separarse?
-  **R/ Cada opción del menú. El ingreso de nota se dividio en dos métodos, uno que valida la entrada de datos como decimal y otro método que se valida el rango de notas de 0 a 100. 
+  **R/ Cada opción del menú. El ingreso de nota se dividio en dos métodos, uno que valida la entrada de datos como decimal y otro método que se valida el rango de notas de 0 a 100.**
 
 Ejemplos de posibles tareas:
 
@@ -54,7 +54,7 @@ Ejemplos de posibles tareas:
 
 Explicar por qué dividir estas tareas mejora el programa.
 
-**R/ Porque hace el codigo más legible y reutilizable. Dividirlas hace que sea más fácil el llevar el control de cada tarea por separado si que se afecten entre sí.
+**R/ Dividir las tareas en funciones o métodos mejora el programa porque aumenta la modularidad, hace el código más legible y facilita su mantenimiento. Cada función se encarga de una sola responsabilidad, lo que permite modificar o reutilizar partes del programa sin afectar las demás.**
 
 ## 2️⃣ Variables Locales vs Globales
 
