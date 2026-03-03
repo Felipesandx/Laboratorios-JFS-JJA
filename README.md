@@ -1,7 +1,8 @@
 # Laboratorios-JFS-JJA
 # 📘 Ejercicio en Clase 3 – Modularización en Java
 ## Curso: Programación 1
-
+Nombres: Juan Felipe Sandoval Recinos 0905-25-10985
+         José Javier Alay Méndez 0905-25-11899
 ---
 
 ## 🎯 Objetivo
