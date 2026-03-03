@@ -9,7 +9,7 @@ public class Main {
     static List<String> estudiantes = new ArrayList<>();
     static List<Double> calificaciones = new ArrayList<>();
 
-    static Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in); //agregado como estatico
     public static void main(String[] args) {
 
         
@@ -19,7 +19,7 @@ public class Main {
         
         do {
         	mostrarMenú();
-            opcion = Integer.parseInt(scanner.nextLine());
+            opcion = leerEntero(scanner,"");
             switch (opcion) {
 
             case 1: 
@@ -130,5 +130,23 @@ public class Main {
              System.out.println("El estudiante con la calificación más alta es: "
                      + estudianteMax + " con " + maxCalificacion);
          }
+    	 
     }
+    public static int leerEntero(Scanner scanner, String mensaje) {
+        int numero = 0;
+        boolean valido = false;
+
+        while (!valido) {
+            System.out.print(mensaje);
+            String entrada = scanner.nextLine();
+            try {
+                numero = Integer.parseInt(entrada);
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Valor invalido. Ingresa un número.");
+            }
+        }
+        return numero;
+    }
+    
 }
