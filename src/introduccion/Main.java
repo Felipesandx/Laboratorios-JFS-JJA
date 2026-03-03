@@ -12,7 +12,6 @@ public class Main {
 
     static Scanner scanner = new Scanner(System.in); //agregado como estatico
     public static void main(String[] args) {
-
         
         int opcion;
          
@@ -144,8 +143,7 @@ public class Main {
 
              System.out.println("El estudiante con la calificación más alta es: "
                      + estudianteMax + " con " + maxCalificacion);
-         }
-    	 
+         } 
     }
     
     // Metodo que valida que los numeros sean enteros, se usa para validar las entradas en el menu 
